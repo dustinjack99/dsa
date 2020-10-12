@@ -66,6 +66,7 @@ class HashTable {
     resize() {
         this._tableSize = this._tableSize * 2;
         //TODO: go through and rehash all values
+        //REMEMBER TO REHASH ALL VALUE AFTER RESIZING
         for(let i = 0; i < this._storage.length; i++) {
             if(this._storage[i].isArray()) {
                 let arrayAtIndex = this._storage[i];
