@@ -1,0 +1,74 @@
+STACKS / QUEUES
+1. Use an array to implement 3 stacks.
+- length 30, first stack is 10, second is 20, third is 30
+- hold pointers to each stacks, interleaving
+
+2. implement a getMin() or getMax() method on your stack.
+- constant time requires auxilary data structure
+- will need to push current min to stack, then pop off
+
+3. Create a queue using 2 stacks.
+- works exactly how you think
+
+4. Sort a stack with the min values in order, on top. 
+You can use another stack as a buffer.
+- https://repl.it/@bgando/sort-stack-solution
+
+5. Write a function that returns true if a string of 
+brackets is valid / balanced.
+- push open brackets, pop closed brackets
+
+LINKED LIST
+1. Delete a node in the middle of a linked LIST
+- must keep track of length
+- can count length ahead of time, or: 
+- find length by looping, then loop again
+
+2. Delete a duplicate
+- use auxilary hash table 
+- sort the list, but its super hard to do
+
+3. Partition a list around a value
+- https://repl.it/@bgando/ll-partition-solution
+
+4. Reverse a linked list
+- do it in place
+- make sure to do two pointers, then swap them
+
+5. Is the linked list a cycle?
+- make a fast pointer and slow pointer
+- if fast pointer equals slow, its a cycle
+- https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
+
+6. Find kth to last node in Linked List
+- first pointer at head, second pointer at head + k
+
+HASH TABLE (usually always an optimization step)
+1. Count all occurances of all characters or words in body of text or string
+
+2. Delete duplicates in a list.
+- https://www.geeksforgeeks.org/remove-duplicates-from-a-given-string/
+
+3. Find a unique value in a list.
+- https://www.geeksforgeeks.org/determine-string-unique-characters/
+
+4. Find if two integers in a list add up to k (two sum).
+- https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
+
+ARRAY / STRING
+1. Rotate a matrix, string, or array
+- strings are immutable!! split string into array 
+- https://www.geeksforgeeks.org/array-rotation/
+
+2. Given m X n matrix, if element is 0, set entire column and row to 0
+- set own array to zero, the placement in other arrays
+
+3. Search for a value
+- flex your qSort / mergeSort and binary search chops
+
+4. Function that encodes all spaces into '%20'.
+- Edge cases: characters in different languages and punctuation
+
+5. Merge two sorted lists into one list.
+- Isn't this just mergeSort?
+- Use two pointers in linear time to make one sorted list
