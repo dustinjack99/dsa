@@ -35,10 +35,18 @@ class BinaryTree {
         this.right = null;
     }
 
-    insert(value) {
-        if(value < this.value) {
-
+    insert(node) {
+        if(!this.left && node.value < this.value) {
+            this.left = node;
         }
+
+        if(!this.right && node.value > this.value) {
+            this.right = node;
+        }
+
+        insert(this.left);
+        insert(this.right);
+        return; 
     }
 
     traverse(tree) {
