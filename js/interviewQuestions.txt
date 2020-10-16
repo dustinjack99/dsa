@@ -72,3 +72,11 @@ ARRAY / STRING
 5. Merge two sorted lists into one list.
 - Isn't this just mergeSort?
 - Use two pointers in linear time to make one sorted list
+
+GRAPHS
+1. Find shortest path.
+- Breadth First Search
+
+2. Finding if this node can be traced back.
+
+3. Copying a graph.

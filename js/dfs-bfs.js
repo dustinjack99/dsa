@@ -35,6 +35,8 @@ function breadthFirstTraversal(startingNode, func = console.log) {
     visited[startingNode] = true;
     
     while (nodeQueue.length) {
+        //implement a linked list to optimize
+        //remove from the head in constant time
         const current = nodeQueue.shift();
         const neighbors = this.adjList[current];
         func(current);
@@ -46,6 +48,10 @@ function breadthFirstTraversal(startingNode, func = console.log) {
             }
         })
     }
+}
+
+function binarySearch() {
+    
 }
 
 

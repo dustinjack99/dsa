@@ -1,3 +1,6 @@
+//This is an undirected graph
+//To be directed, you'd need to add data to edges
+
 class Graph {
     constructor() {
         this.adjList = {};
