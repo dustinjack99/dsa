@@ -18,10 +18,7 @@ class Graph {
     }
 
     addNode(node) {
-        this.adjList[node.value] = {
-            node,
-            edges: []
-        }
+        this.adjList[node.value] = [];
     }
 
     removeNode(node) {
