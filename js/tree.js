@@ -88,8 +88,8 @@ class BinaryTree {
             return 1;
         }
 
-        return (countLeaves(node.left)) +
-        (countLeaves(node.right));
+        return (this.countLeaves(node.left)) +
+        (this.countLeaves(node.right));
 
     }
 }
@@ -102,3 +102,5 @@ bTree.insert(new BinaryTree(5));
 bTree.insert(new BinaryTree(3));
 bTree.insert(new BinaryTree(8));
 console.log(bTree);
+console.log(bTree.contains(8));
+console.log(bTree.countLeaves(bTree));
