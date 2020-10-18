@@ -1,8 +1,7 @@
 class Tree {
     constructor(value) {
         this.value = value;
-        this.left = null;
-        this.right = null;
+        this.children = [];
     }
 
     insertChild(data) {
@@ -17,14 +16,22 @@ class Tree {
 
     //this is a faux traversal
     traverse(tree) {
-        console.log(tree.name);
+        console.log(tree.value);
         if(tree.children) {
             for(let i = 0; i < tree.children.length; i++) {
-                if(tree.children[i].name) {
+                if(tree.children[i].value) {
                    traverse(tree.children[i]);
                 }
             }
         }
+    }
+}
+
+class Node {
+    constructor(val) {
+        this.value = val;
+        this.left = null;
+        this.right = null;
     }
 }
 
@@ -36,16 +43,22 @@ class BinaryTree {
     }
 
     insert(node) {
+        if(node.value === this.value) {
+            console.log("this value already exists")
+        }
+
         if(!this.left && node.value < this.value) {
             this.left = node;
+        } else if(this.left && node.value < this.value) {
+            this.left.insert(node);
         }
 
         if(!this.right && node.value > this.value) {
             this.right = node;
+        } else if(this.right && node.value > this.value) {
+            this.right.insert(node);
         }
 
-        insert(this.left);
-        insert(this.right);
         return; 
     }
 
@@ -80,3 +93,12 @@ class BinaryTree {
 
     }
 }
+
+const bTree = new BinaryTree(8);
+bTree.insert(new BinaryTree(2));
+bTree.insert(new BinaryTree(18));
+bTree.insert(new BinaryTree(1));
+bTree.insert(new BinaryTree(5));
+bTree.insert(new BinaryTree(3));
+bTree.insert(new BinaryTree(8));
+console.log(bTree);
