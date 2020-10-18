@@ -3,7 +3,7 @@
 
 //iterative approach
 //for recursive stack, the recursive calls ARE your stack
-function depthFirstTraversal(startingNode, func = console.log) {
+function depthFirstTraversal(startingNode) {
     const nodeStack = [];
     const visited = {};
 
@@ -12,9 +12,7 @@ function depthFirstTraversal(startingNode, func = console.log) {
 
     while(nodeStack.length) {
         const current = nodeStack.pop();
-
         const neighbors = this.adjList[current];
-        func(current);
 
         neighbors.forEach(neighbor => {
             if(!visited[neighbor]) {
@@ -27,7 +25,7 @@ function depthFirstTraversal(startingNode, func = console.log) {
 
 //BFS
 //Goes across all top level
-function breadthFirstTraversal(startingNode, func = console.log) {
+function breadthFirstTraversal(startingNode) {
     const nodeQueue = [];
     const visited = {};
 
@@ -39,7 +37,6 @@ function breadthFirstTraversal(startingNode, func = console.log) {
         //remove from the head in constant time
         const current = nodeQueue.shift();
         const neighbors = this.adjList[current];
-        func(current);
 
         neighbors.forEach(neighbor => {
             if(!visited[neighbor]) {
